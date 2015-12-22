@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+
+    <title>Challenge</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css"></link>
+
+    <!-- Angular -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+.
+    <!-- JS -->
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js"></script>
+    <script src="bower_components/lodash/lodash.min.js"></script>
+
+    <!-- Bootstrap angular -->
+    <script src="scripts/app.js"></script>
+
+    <!-- Angular services, filters and directives -->
+    <script src="scripts/services/books.js"></script>
+    <script src="scripts/services/categories.js"></script>
+    <script src="scripts/filters/humanized.js"></script>
+    <script src="scripts/directives/book.js"></script>
+    <script src="scripts/directives/placehold.js"></script>
+
+    <!-- Modules -->
+    <script src="scripts/modules/controllers/list.js"></script>
+    <script src="scripts/modules/controllers/view.js"></script>
+
+</head>
+
+<body ng-app="app">
+
+    <div ui-view></div>
+
+</body>
+
+</html>

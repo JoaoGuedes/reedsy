@@ -1,0 +1,23 @@
+.loader {
+    margin-top: $spacer;
+}
+
+//Search
+.search-form {
+    margin-top: $spacer;
+
+    fieldset {
+        label, input, select {
+            margin: 0px 3px;
+        }
+
+        .search-input {
+            min-width: 200px;
+        }
+    }
+}
+
+//Gallery
+.book-gallery {
+    margin-top: $spacer;
+}

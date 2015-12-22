@@ -1,0 +1,80 @@
+/* VARIABLES */
+/* COLORS */
+/* UTILS */
+.centered {
+  float: none;
+  margin: 0 auto; }
+
+.fixed {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000; }
+
+/* LINKS */
+a {
+  font-weight: 700;
+  color: #4d4d4d; }
+  a:hover {
+    color: #d9d9d9;
+    text-decoration: none; }
+
+.loader {
+  margin-top: 40px; }
+
+.search-form {
+  margin-top: 40px; }
+  .search-form fieldset label, .search-form fieldset input, .search-form fieldset select {
+    margin: 0px 3px; }
+  .search-form fieldset .search-input {
+    min-width: 200px; }
+
+.book-gallery {
+  margin-top: 40px; }
+
+.header, .footer {
+  background-color: #d1d1d1; }
+
+.spacer {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
+.paragraph {
+  margin: 40px 0px; }
+
+img.avatar {
+  margin: 15px 0px; }
+
+.book {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 4px;
+  max-width: 500px; }
+  .book img.cover {
+    width: 100%; }
+  .book .info {
+    padding: 10px 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .book .social {
+    padding: 0px 3px; }
+    .book .social i {
+      margin-top: 2px; }
+
+/* Bootstrap's column system wasn't a good fit for this situation
+   so I added a custom solution */
+.book-column {
+  float: left;
+  width: 100%; }
+  @media screen and (min-width: 500px) {
+    .book-column {
+      width: 50%; } }
+  @media screen and (min-width: 1000px) {
+    .book-column {
+      width: 33.3%; } }
+
+.book-wrapper {
+  padding: 5px; }
+
+/*# sourceMappingURL=styles.css.map */

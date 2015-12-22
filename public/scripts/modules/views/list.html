@@ -1,0 +1,77 @@
+<div class="container">
+
+    <a href="#"><i class="fa fa-arrow-up fixed"></i></a>
+
+    <div class="col-sm-12 text-center loader" ng-hide="loaded">
+        <i class="fa fa-4x fa-circle-o-notch fa-spin"></i>
+    </div>
+
+    <!-- Search form -->
+    <div ng-show="loaded">
+        <div class="row search-form">
+
+            <div class="col-lg-8 centered">
+
+                <form class="form-inline text-center" name="form.search">
+
+                    <fieldset>
+                        <div class="form-group">
+                            <label>Find me the best</label>
+                            <select class="form-control input-md"
+                            ng-options="category as category for category in categories"
+                            ng-model="options.category"
+                            ng-change="changeCategory(options.category)">
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>books about</label>
+                            <select class="form-control input-md"
+                            ng-options="genre as genre for genre in genres"
+                            ng-model="options.genre"
+                            ng-change="changeGenre(options.genre)">
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" ng-class="{ 'has-error': form.search.$invalid }">
+                        <input type="search" class="form-control search-input"
+                        placeholder="Search books"
+                        ng-model="options.searchTerm"
+                        ng-minlength="4"
+                        ng-change="search(options.searchTerm)"
+                        ng-model-options="{ debounce: 500 }">
+                        </div>
+                    </fieldset>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- Book gallery -->
+        <div class="row book-gallery">
+
+            <div class="col-sm-12 text-center loader" ng-show="searching">
+                <i class="fa fa-4x fa-circle-o-notch fa-spin"></i>
+            </div>
+
+            <div class="col-sm-8 centered" ng-if="!searching">
+
+                <div infinite-scroll="lazyLoadBooks()" infinite-scroll-disabled="fetchedAll">
+
+                    <div ng-repeat="book in buffer">
+                        <book ng-model="book"></book>
+                    </div>
+
+                    <div style='clear: both;'></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

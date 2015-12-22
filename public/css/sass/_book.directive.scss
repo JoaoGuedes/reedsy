@@ -1,0 +1,55 @@
+//Book slot
+.book {
+    background-color: $almost-white;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 500px;
+
+    img.cover {
+        width: 100%;
+    }
+
+    //Author and title
+    .info {
+        padding: 10px 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    //Likes and date
+    .social {
+        padding: 0px 3px;
+
+        //Heart icon
+        i {
+            margin-top: 2px;
+        }
+    }
+}
+
+$two-column-breakpoint: 500px;
+$three-column-breakpoint: 1000px;
+
+/* Bootstrap's column system wasn't a good fit for this situation
+   so I added a custom solution */
+.book-column {
+    
+    //Default mobile settings, column fills entire row
+    float: left;
+    width: 100%;
+
+    //Breakpoint for two columns per row
+    @media screen and (min-width: $two-column-breakpoint) {
+        width: 50%;
+    }
+
+    //Breakpoint for three columns per row
+    @media screen and (min-width: $three-column-breakpoint) {
+        width: 33.3%;
+    }
+}
+
+.book-wrapper {
+    padding: 5px;
+}

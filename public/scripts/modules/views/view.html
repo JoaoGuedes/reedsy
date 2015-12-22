@@ -1,0 +1,61 @@
+<div class="container-fluid">
+
+    <!-- Header -->
+    <div class="row header">
+
+        <a ui-sref="list" class="fixed">
+            <i class="fa fa-arrow-left"></i>
+        </a>
+
+        <div class="col-sm-6 centered spacer">
+            <h2>{{book.name}}</h2>
+            <h5>By {{book.author.name}}</h5>
+
+            <p class="paragraph">{{book.description}}</p>
+
+            <h5>Categories</h5>
+            <ins>{{book.genre.category}}</ins>,
+            <ins>{{book.genre.name}}</ins>
+        </div>
+    </div>
+
+    <!-- Body -->
+    <div class="row">
+        <div class="col-sm-6 centered spacer">
+
+            <h2>
+                <small>Introduction</small>
+            </h2>
+
+            <div class="paragraph">
+                <p ng-repeat="paragraph in book.introduction">{{paragraph.content}}</p>
+            </div>
+
+            <hr/>
+
+            <div class="text-center">
+                <img ng-src="{{book.author.avatar}}" class="img img-circle avatar">
+                <p class="lead">Written by {{book.author.name}}</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="row footer">
+        <div class="col-sm-8 centered spacer">
+
+            <div class="text-center">
+                <h2>Similar reading</h2>
+                <h5>If you liked this book, we recommend you check out these emerging titles</h5>
+            </div>
+
+            <div class="col-sm-12 centered">
+                <div ng-repeat="book in similars">
+                    <book ng-model="book"></book>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

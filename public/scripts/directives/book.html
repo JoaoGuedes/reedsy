@@ -1,0 +1,23 @@
+<div class="book-column book-wrapper" ng-if="ngModel">
+    <div class="book">
+
+        <a ui-sref="view({ id: ngModel.id })">
+            <img class="cover" placehold img-src="ngModel.cover" src="images/loader.png">
+        </a>
+
+        <div class="info">
+            <a ui-sref="view({ id: ngModel.id })">
+                <strong class="link">{{ngModel.name}}</strong>
+            </a>
+            <br/>
+            by {{ngModel.author.name}}
+        </div>
+
+        <div class="social">
+            <i class="fa fa-heart-o pull-left"></i>
+            <span>{{ngModel.likes}}</span>
+
+            <span class="pull-right"><small>{{ngModel.published | humanized }}<small></span>
+        </div>
+    </div>
+</div>

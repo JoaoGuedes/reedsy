@@ -1,0 +1,38 @@
+/* VARIABLES */
+$spacer: 40px;
+
+/* COLORS */
+$white: #FFF;
+$almost-white: #eee;
+$light-gray: darken($white, 15%);
+$mid-gray: darken($white, 18%);
+$dark-gray: darken($white, 70%);
+
+/* UTILS */
+.centered {
+    float: none;
+    margin: 0 auto;
+}
+
+//Top-left navigation arrows
+.fixed {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+/* LINKS */
+a {
+    font-weight: 700;
+    color: $dark-gray;
+
+    &:hover {
+        color: $light-gray;
+        text-decoration: none;
+    }
+}
+
+@import 'list';
+@import 'view';
+@import 'book.directive';
