@@ -106,6 +106,8 @@ angular.module('app')
                 $scope.books = _.filter($scope.bookBuffer, function(book) {
                     return book.genre.name === name;
                 });
+            } else {
+                $scope.books = $scope.bookBuffer;
             }
 
             restartLazyLoading(); //Change to model, restart lazy loader
