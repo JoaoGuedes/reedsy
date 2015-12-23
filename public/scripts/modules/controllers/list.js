@@ -6,7 +6,7 @@ angular.module('app')
     '_',
     'BooksService',
     'CategoriesService',
-    function($scope, _, Books, Categories, Genres) {
+    function($scope, _, Books, Categories) {
 
         //Once the controller is loaded, scroll to top
         window.scrollTo(0, 0);
