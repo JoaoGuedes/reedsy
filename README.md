@@ -1,3 +1,5 @@
+![Screenshot](https://github.com/JoaoGuedes/reedsy/blob/master/resources/screenshot.png "Screenshot")
+
 Node **0.12.9** used on server, with NPM ***2.14.0***
 
 To install Node with NPM, open a Bash shell and install Homebrew:
